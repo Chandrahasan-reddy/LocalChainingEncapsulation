@@ -49,11 +49,11 @@ this.cName = cName;
 this.cNum = cNum;
 Getter methods for all fields.
 
-💡 Sample Output
-If you run:
+
 
 
 MyCustomer c1 = new MyCustomer(2, "Alex", 456789);
+//output Prininting
 System.out.println(c1.getcID());
 System.out.println(c1.getcName());
 System.out.println(c1.getcNum());
