@@ -1,24 +1,46 @@
-# Compiled class file
-*.class
+package encapsulationpratice;
 
-# Log file
-*.log
+class MyCustomer {
+    private int cID;
+    private String cName;
+    private int cNum;
 
-# BlueJ files
-*.ctxt
+    //setters
+    public MyCustomer() {
+        cID = 1;
+        cName = "Chandu";
+        cNum = 9876543;
+    }
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+    public MyCustomer(String name) {
+        this();           
+    }
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+    public MyCustomer(int cID, String cName, int cNum) {
+        this(cName);
+        this.cID = cID;  
+        this.cNum = cNum;
+    }
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+    //getters
+    public int getcID() {
+        return cID;
+    }
+
+    public String getcName() {
+        return cName;
+    }
+
+    public int getcNum() {
+        return cNum;
+    }
+}
+
+public class Encapsulationwiththreeparameters {
+    public static void main(String[] args) {
+        MyCustomer c1 = new MyCustomer(2,"Alex",456789);
+        System.out.println(c1.getcID());
+        System.out.println(c1.getcName());  
+        System.out.println(c1.getcNum()); 
+    }
+}
